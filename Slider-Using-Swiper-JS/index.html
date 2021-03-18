@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="section">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sapiente
+                            atque quisquam doloremque impedit quam nesciunt modi dicta repellat, quo architecto eius
+                            reprehenderit, exercitationem, est repellendus nostrum facere ab tempora.</div>
+                        <div class="user">
+                            <div class="card__img"></div>
+                            <div class="card__data">
+                                <h3 class="card__header">Someone Famous</h3>
+                                <p class="card__position">Creative Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sapiente
+                            atque quisquam doloremque impedit quam nesciunt modi dicta repellat, quo architecto eius
+                            reprehenderit, exercitationem, est repellendus nostrum facere ab tempora.</div>
+                        <div class="user">
+                            <div class="card__img"></div>
+                            <div class="card__data">
+                                <h3 class="card__header">Someone Famous</h3>
+                                <p class="card__position">Creative Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sapiente
+                            atque quisquam doloremque impedit quam nesciunt modi dicta repellat, quo architecto eius
+                            reprehenderit, exercitationem, est repellendus nostrum facere ab tempora.</div>
+                        <div class="user">
+                            <div class="card__img"></div>
+                            <div class="card__data">
+                                <h3 class="card__header">Someone Famous</h3>
+                                <p class="card__position">Creative Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 50,
+                depth: 50,
+                modifier: 2,
+                slideShadows: false,
+            },
+        });
+    </script>
+</body>
+
+</html>
