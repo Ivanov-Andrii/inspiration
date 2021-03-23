@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Effect with Toggle Button</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card__img"><img src="./man.jpg" alt="picture"></div>
+            <div class="card__desc">
+                <div class="card_header">Someone Famouse</div>
+                <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt veritatis optio fugiat quia ut molestiae veniam rem totam asperiores ipsam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt veritatis optio fugiat quia ut molestiae veniam rem totam asperiores ipsam?</p>
+            </div>
+            <div class="card__cirle"></div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    let toggle = document.querySelector('.card__cirle');
+    let img = document.querySelector('.card__img');
+    let cardDesc = document.querySelector('.card__desc');
+    let count = 0;
+    toggle.addEventListener("click", () => {
+        count ++;
+        if (count % 2 == 1) {
+            img.style.display = 'none';
+            cardDesc.style.display = 'block';
+            toggle.style.transform = `rotate(225deg)`;
+            toggle.style.boxShadow = `0 0 0 500px purple`;
+        } else {
+            img.style.display = 'block';
+            cardDesc.style.display = 'none';
+            toggle.style.transform = `rotate(0deg)`;
+            toggle.style.boxShadow = `0 0 0 0px purple`;
+
+        }
+    })
+</script>
+
+
+
