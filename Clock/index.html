@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <title>Transperent Clock</title>
+</head>
+<body>
+    <div class="clock">
+        <div class="container">
+            <div class="wrap">
+                <div class="elem" id="hour">00</div>
+                <div class="elem">:</div>
+                <div class="elem" id="minute">00</div>
+                <div class="elem">:</div>
+                <div class="elem" id="second">00</div>
+                <sup class='ampm' id="ampm">AM</sup>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        let hour = document.getElementById("hour");
+        let minute = document.getElementById("minute");
+        let second = document.getElementById("second");
+        let ampm = document.getElementById("ampm");
+
+        let getHours = new Date().getHours();
+        let getMinutes = new Date().getMinutes();
+        let getSeconds = new Date().getSeconds();
+        let ap = '';
+
+        console.log(getHours, getMinutes, getSeconds);
+
+        if (getHours < 10) {
+            getHours = "0" + getHours;
+            ap = "AM";
+        } else {
+            ap = "PM";
+        }
+
+        if (getMinutes < 10) getMinutes = "0" + getMinutes;
+        if (getSeconds < 10) getSeconds = "0" + getSeconds;
+        
+
+
+
+        hour.innerHTML = getHours;
+        minute.innerHTML = getMinutes;
+        second.innerHTML = getSeconds;
+        ampm.innerHTML = ap;
+
+
+        setInterval(function(){
+            let hour = document.getElementById("hour");
+            let minute = document.getElementById("minute");
+            let second = document.getElementById("second");
+            let ampm = document.getElementById("ampm");
+
+            let getHours = new Date().getHours();
+            let getMinutes = new Date().getMinutes();
+            let getSeconds = new Date().getSeconds();
+            let ap = '';
+
+            console.log(getHours, getMinutes, getSeconds);
+
+            if (getHours < 10) getHours = "0" + getHours;
+            if (getMinutes < 10) getMinutes = "0" + getMinutes;
+            if (getSeconds < 10) getSeconds = "0" + getSeconds;
+            if (getHours > 12) {
+                getHours -= 12;
+                ap = "PM";
+            } else {
+                ap = "AM"
+            }
+            
+
+
+
+            hour.innerHTML = getHours;
+            minute.innerHTML = getMinutes;
+            second.innerHTML = getSeconds;
+            ampm.innerHTML = ap;
+        }, 1000)
+    </script>
+</body>
+</html>
